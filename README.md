@@ -1,6 +1,6 @@
 ## Gatling 101
 
-There are four packages demonstrating different things you can do with Gatling.
+A collection of simple, runnable load tests demonstrating useful things you can do with Gatling. 
 
 ### github.basic
 
@@ -16,7 +16,7 @@ Read from external data source (in this case a CSV), inject this data into the H
 
 ### github.checker
 
-Extract data from HTTP responses, store them in a variable, pass them along to a subsequent HTTP GET request.
+Extract data from HTTP responses, store them in a session variable, pass them along to a subsequent HTTP GET request.
 
     sbt "test-only github.checker.GitHubSearchCheckerSimulation"
 
