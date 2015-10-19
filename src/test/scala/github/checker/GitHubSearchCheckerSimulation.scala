@@ -8,7 +8,7 @@ import scala.concurrent.duration._
 
 class GitHubSearchCheckerSimulation extends Simulation {
     val gitHubProtocol: HttpProtocolBuilder = http
-      .baseURL("https://github.com")
+      .baseURL("https://api.github.com")
       .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
       .acceptEncodingHeader( "gzip, deflate")
       .acceptLanguageHeader( "en-US,en;q=0.5")

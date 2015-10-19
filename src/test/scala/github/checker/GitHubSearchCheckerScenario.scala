@@ -9,6 +9,6 @@ object GitHubSearchCheckerScenario {
     .exec(GitHubSearchCheckerRequester.getHomepage)
     .pause(2)
     .exec(GitHubSearchCheckerRequester.searchForGatling)
-    .pause(1)
-    .exec(GitHubSearchCheckerRequester.getGatlingPage)
+//    .pause(1)
+//    .exec(GitHubSearchCheckerRequester.getGatlingPage)
 }

@@ -7,7 +7,7 @@ object GitHubSearchCheckerRequester {
    val getHomepage = http("github-home")
      .get("/")
 
-   val searchForGatling = http("search-gatling").get("/search?utf8=✓&q=gatling")
+   val searchForGatling = http("search-gatling").get("/search/repositories?q=gatling")
 //     .check(jsonPath("$.sessionId")
 //       .saveAs("token"))
 //     .check(status.is(200))
