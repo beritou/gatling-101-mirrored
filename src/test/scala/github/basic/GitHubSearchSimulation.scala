@@ -1,9 +1,10 @@
-package github
+package github.basic
 
-import io.gatling.http.config.HttpProtocolBuilder
-import scala.concurrent.duration._
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
+import io.gatling.http.config.HttpProtocolBuilder
+
+import scala.concurrent.duration._
 
 class GitHubSearchSimulation extends Simulation {
   val gitHubProtocol: HttpProtocolBuilder = http
