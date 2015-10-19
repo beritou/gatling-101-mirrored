@@ -8,11 +8,13 @@ object GitHubSearchScenario {
   val search: ScenarioBuilder = scenario("Search for Gatling on GitHub")
     .exec(GitHubSearchRequester.getHomepage)
     .pause(2)
-    .exec(http("search-gatling").get("/search?utf8=✓&q=gatling"))
+    .exec(GitHubSearchRequester.searchForGatling)
     .pause(1)
-    .exec(http("gatling-on-github").get("/gatling/gatling"))
+    .exec(GitHubSearchRequester.getGatlingPage)
 }
 
 object GitHubSearchRequester {
   val getHomepage = http("github-home").get("/")
+  val searchForGatling = http("search-gatling").get("/search?utf8=✓&q=gatling")
+  val getGatlingPage = http("gatling-on-github").get("/gatling/gatling")
 }
