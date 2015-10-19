@@ -20,6 +20,14 @@ Extract data from HTTP responses, store them in a variable, pass them along to a
 
     sbt "test-only github.checker.GitHubSearchCheckerSimulation"
 
+### github.extra
+
+For when you want to write some plain old Scala outside the confines of the Gatling DSL.
+
+    sbt "test-only github.extra.GitHubSearchExtraSimulation"
+
+
+
 ### Local development - Login load test (must be done first to generate session tokens)
 
 1. From terminal execute
