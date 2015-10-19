@@ -1,4 +1,4 @@
-## Gatling load tests
+## Gatling 101
 
 There are four packages demonstrating different things you can do with Gatling.
 
