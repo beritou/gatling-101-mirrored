@@ -4,9 +4,16 @@ There are four packages demonstrating different things you can do with Gatling.
 
 ### github.basic
 
-1. Execute some basic HTTP GET requests.
+Execute some basic HTTP GET requests.
 
     sbt "test-only github.basic.GitHubSearchBasicSimulation"
+
+### github.feeder
+
+Read from external data source (in this case a CSV), inject this data into the HTTP GET requests.
+
+    sbt "test-only github.feeder.GitHubSearchFeederSimulation"
+
 
 ### Local development - Login load test (must be done first to generate session tokens)
 
