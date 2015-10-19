@@ -14,6 +14,11 @@ Read from external data source (in this case a CSV), inject this data into the H
 
     sbt "test-only github.feeder.GitHubSearchFeederSimulation"
 
+### github.checker
+
+Extract data from HTTP responses, store them in a variable, pass them along to a subsequent HTTP GET request.
+
+    sbt "test-only github.checker.GitHubSearchCheckerSimulation"
 
 ### Local development - Login load test (must be done first to generate session tokens)
 
