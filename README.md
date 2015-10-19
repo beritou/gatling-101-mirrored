@@ -1,8 +1,12 @@
 ## Gatling load tests
 
-### Prepare username/password CSV - mandatory
+There are four packages demonstrating different things you can do with Gatling.
 
-1. Export the user_account table as a csv to "thumper/src/test/resources/users.csv"
+### github.basic
+
+1. Execute some basic HTTP GET requests.
+
+    sbt "test-only github.basic.GitHubSearchBasicSimulation"
 
 ### Local development - Login load test (must be done first to generate session tokens)
 
