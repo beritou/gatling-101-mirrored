@@ -5,6 +5,6 @@ import io.gatling.http.Predef._
 
 object GitHubSearchFeederRequester {
   val getHomepage = http("github-home").get("/")
-  val searchForGatling = http("search-gatling").get("/search?utf8=✓&q=gatling")
+  val searchForPages = http("search-${uri}").get("/search?utf8=✓&q=${uri}")
   val getGatlingPage = http("gatling-on-github").get("/gatling/gatling")
 }

@@ -20,8 +20,7 @@ class GitHubSearchFeederSimulation extends Simulation {
      GitHubSearchFeederScenario.search.inject(
        nothingFor(1 second),
        atOnceUsers(1),
-       rampUsers(5) over(10 seconds),
-       constantUsersPerSec(1) during(10 seconds)
+       rampUsers(5) over(5 seconds)
      )
    ).protocols(gitHubProtocol)
  }
