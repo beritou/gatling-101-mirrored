@@ -7,11 +7,15 @@ object GitHubSearchCheckerRequester {
    val getHomepage = http("github-home")
      .get("/")
 
-   val searchForGatling = http("search-gatling").get("/search/repositories?q=gatling")
-//     .check(jsonPath("$.sessionId")
-//       .saveAs("token"))
-//     .check(status.is(200))
+   val searchForGatling = http("search-gatling")
+     .get("/search/repositories?q=gatling")
+     .check(jsonPath("$.items[0].name")
+       .saveAs("resultName"))
+     .check(status.is(200))
 
-  val getGatlingPage = http("gatling-on-github")
-    .get("/gatling/gatling")
+  val searchForGatlingWithStoredSessionVariable = http("search-gatling-with-session-variable")
+    .get("/search/repositories?q=${resultName}")
+     .check(jsonPath("$.items[0].name")
+       .saveAs("resultName"))
+     .check(status.is(200))
  }

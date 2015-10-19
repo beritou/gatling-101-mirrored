@@ -18,9 +18,7 @@ class GitHubSearchCheckerSimulation extends Simulation {
 
     setUp(
       GitHubSearchCheckerScenario.search.inject(
-        nothingFor(1 second),
-        atOnceUsers(1),
-        rampUsers(5) over(5 seconds)
+        rampUsers(5) over(15 seconds)
       )
     ).protocols(gitHubProtocol)
   }
